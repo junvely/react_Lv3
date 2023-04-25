@@ -6,8 +6,8 @@ import {
   InputNameLabel,
   InputPriceLabel,
   StInput,
-} from "../styles/Inputs.styles";
-import { StButton } from "../styles/Buttons.styles";
+} from "../../styles/Inputs.styles";
+import PrimarySmallButton from "../Buttons/PrimaryButtons/PrimarySmallButton";
 
 function Inputs() {
   const [name, setName] = useState("");
@@ -62,16 +62,7 @@ function Inputs() {
           금액
           <StInput type="text" value={price} onChange={priceChangeHandler} />
         </InputPriceLabel>
-        <StButton
-          width="var(--size-small)"
-          backgroundColor="var(--color-light-green)"
-          borderColor="var(--color-light-green)"
-          color="var(--color-green)"
-          backgroundColorActive="var(--color-green)"
-          colorActive="var(--color-white)"
-        >
-          저장
-        </StButton>
+        <PrimarySmallButton buttonName={"저장"}></PrimarySmallButton>
       </InputsForm>
     </InputsContainer>
   );

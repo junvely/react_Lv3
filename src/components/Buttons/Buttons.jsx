@@ -3,109 +3,44 @@ import {
   ButtonsContainer,
   ButtonsDiv,
   ButtonsTitle,
-  ButtonIconSpan,
-  ButtonInfoDiv,
-  StButton,
-} from "../styles/Buttons.styles";
+} from "../../styles/Buttons.styles";
+import PrimaryLargeButton from "./PrimaryButtons/PrimaryLargeButton";
+import PrimaryMediumButton from "./PrimaryButtons/PrimaryMediumButton";
+import PrimarySmallButton from "./PrimaryButtons/PrimarySmallButton";
+import DangerLargeButton from "./DangerButtons/DangerLargeButton";
+import DangerMediumButton from "./DangerButtons/DangerMediumButton";
+import DangerSmallButton from "./DangerButtons/DangerSmallButton";
 import { FaAngleRight, FaInfo } from "react-icons/fa";
 
 function Button() {
-  const largePrimaryButton = () => {
-    alert("버튼을 만들어보세요!");
-  };
-
   const largeDangerButton = () => {
     prompt("어렵나요?");
   };
 
+  const largePrimaryButton = () => {
+    alert("버튼을 만들어보세요!");
+  };
   return (
     <ButtonsContainer>
       <ButtonsTitle>Buttons</ButtonsTitle>
 
       <ButtonsDiv>
-        {/* Large Primary Button */}
-        <StButton
-          width="var(--size-large)"
-          borderWidth="2px"
-          borderColor="var(--color-light-green)"
-          color="var(--color-green)"
-          fontWeight="var(--weight-bold)"
-          onClick={largePrimaryButton}
-        >
-          <ButtonInfoDiv>
-            Large Primary Button
-            <ButtonIconSpan>
-              <FaAngleRight />
-            </ButtonIconSpan>
-          </ButtonInfoDiv>
-        </StButton>
-
-        {/* Medium Primary Button */}
-        <StButton
-          width="var(--size-medium)"
-          backgroundColor="var(--color-light-green)"
-          borderColor="var(--color-light-green)"
-          color="var(--color-green)"
-          backgroundColorActive="var(--color-green)"
-          colorActive="var(--color-white)"
-        >
-          Medium
-        </StButton>
-
-        {/* Small Primary Button */}
-        <StButton
-          width="var(--size-small)"
-          backgroundColor="var(--color-light-green)"
-          borderColor="var(--color-light-green)"
-          color="var(--color-green)"
-          backgroundColorActive="var(--color-green)"
-          colorActive="var(--color-white)"
-        >
-          Small
-        </StButton>
+        <PrimaryLargeButton buttonName={"Large Primary Button"} PrimaryLargeButton={largePrimaryButton}>
+          <FaAngleRight />
+        </PrimaryLargeButton>
+        <PrimaryMediumButton buttonName={"Medium"}></PrimaryMediumButton>
+        <PrimarySmallButton buttonName={"Small"}></PrimarySmallButton>
       </ButtonsDiv>
 
       <ButtonsDiv>
-        {/* Large Dangerous Button */}
-        <StButton
-          width="var(--size-large)"
-          borderWidth="2px"
-          borderColor="var(--color-light-red)"
-          color="var(--color-red)"
-          fontWeight="var(--weight-bold)"
-          onClick={largeDangerButton}
+        <DangerLargeButton
+          buttonName={"Large Danger Button"}
+          largeDangerButton={largeDangerButton}
         >
-          <ButtonInfoDiv>
-            Large Danger Button
-            <ButtonIconSpan>
-              <FaInfo />
-            </ButtonIconSpan>
-          </ButtonInfoDiv>
-        </StButton>
-
-        {/* Medium Dangerous Button */}
-        <StButton
-          width="var(--size-medium)"
-          backgroundColor="var(--color-light-red)"
-          borderColor="var(--color-light-red)"
-          color="var(--color-red)"
-          backgroundColorActive="var(--color-red)"
-          colorActive="var(--color-white)"
-        >
-          Medium
-        </StButton>
-
-        {/* Small Dangerous Button */}
-        <StButton
-          width="var(--size-small)"
-          backgroundColor="var(--color-light-red)"
-          borderColor="var(--color-light-red)"
-          color="var(--color-red)"
-          backgroundColorActive="var(--color-red)"
-          colorActive="var(--color-white)"
-        >
-          Small
-        </StButton>
+          <FaInfo />
+        </DangerLargeButton>
+        <DangerMediumButton buttonName={"Medium"}></DangerMediumButton>
+        <DangerSmallButton buttonName={"Small"}></DangerSmallButton>
       </ButtonsDiv>
     </ButtonsContainer>
   );
