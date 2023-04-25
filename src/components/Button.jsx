@@ -23,7 +23,9 @@ function Button({
       borderColor={borderColor}
       onClick={onClick}
     >
-      <StButton size={size}>{name}</StButton>
+      <StButton name={name} size={size} color={color}>
+        {name}
+      </StButton>
       {children ? <StLabel>{children}</StLabel> : ""}
     </StButtonCon>
   );

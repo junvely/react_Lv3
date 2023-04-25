@@ -1,5 +1,5 @@
 import React from "react";
-import { StCon, StSection, StTitle } from "../styles/them";
+import { StFlexCon, StSection, StTitle } from "../styles/them";
 import Button from "./Button";
 import { colors } from "../styles/them";
 import { IoIosArrowForward } from "react-icons/io";
@@ -7,25 +7,26 @@ import { VscBellDot } from "react-icons/vsc";
 import { ButtonSize } from "../styles/Button.styles";
 
 function ButtonSec({ children }) {
-  const onClickPrimaryButton = () => {
+  const handleClickPrimaryButton = () => {
     alert("버튼을 만들어 보세요");
   };
 
-  const onClickNegativeButton = () => {
+  const handleClickNegativeButton = () => {
     prompt("어렵나요?");
   };
 
   return (
     <StSection>
       <StTitle>{children}</StTitle>
-      <StCon>
+      <StFlexCon>
         <Button
+          size="large"
           name="Large Primary Button"
           width={ButtonSize.large.width}
           height={ButtonSize.large.height}
           border={ButtonSize.large.border}
           borderColor={colors.lightGreen}
-          onClick={onClickPrimaryButton}
+          onClick={handleClickPrimaryButton}
         >
           {<IoIosArrowForward />}
         </Button>
@@ -35,22 +36,18 @@ function ButtonSec({ children }) {
           height={ButtonSize.medium.height}
           bgColor={colors.lightGreen}
         ></Button>
+        <Button name="Small" bgColor={colors.lightGreen}></Button>
+      </StFlexCon>
+      <StFlexCon>
         <Button
-          name="Small"
-          width={ButtonSize.small.width}
-          height={ButtonSize.small.height}
-          bgColor={colors.lightGreen}
-        ></Button>
-      </StCon>
-      <StCon>
-        <Button
+          size="large"
           name="Large Negative Button"
           width={ButtonSize.large.width}
           height={ButtonSize.large.height}
           color={colors.darkPink}
           border={ButtonSize.large.border}
           borderColor={colors.lightPink}
-          onClick={onClickNegativeButton}
+          onClick={handleClickNegativeButton}
         >
           {<VscBellDot />}
         </Button>
@@ -63,12 +60,10 @@ function ButtonSec({ children }) {
         ></Button>
         <Button
           name="Small"
-          width={ButtonSize.small.width}
-          height={ButtonSize.small.height}
           color={colors.darkPink}
           bgColor={colors.lightPink}
         ></Button>
-      </StCon>
+      </StFlexCon>
     </StSection>
   );
 }

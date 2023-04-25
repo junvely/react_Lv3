@@ -1,11 +1,62 @@
-import React from "react";
-import { StCon, StSection, StTitle } from "../styles/them";
+import React, { useState } from "react";
+import { StFlexCon, StSection, StTitle, colors } from "../styles/them";
+import Button from "./Button";
+import { ButtonSize } from "../styles/Button.styles";
+import Modal from "./Modal";
 
 function ModalSec({ children }) {
+  const [largeModal, setLargeModal] = useState(false);
+  const [smallModal, setSmallModal] = useState(false);
+
+  const largeModalToggle = () => {
+    setLargeModal(!largeModal);
+  };
+
+  const smallModalToggle = () => {
+    setSmallModal(!smallModal);
+  };
+
   return (
     <StSection>
       <StTitle>{children}</StTitle>
-      <StCon></StCon>
+      <StFlexCon>
+        <Button
+          name="open modal"
+          bgColor={colors.lightGreen}
+          onClick={largeModalToggle}
+        ></Button>
+        {largeModal && (
+          <Modal
+            type="large"
+            width="500px"
+            height="300px"
+            onClick={largeModalToggle}
+          >
+            닫기와 확인 버튼 2개가 있고, 외부 영역을 눌러도 모달이 닫히지
+            않아요.
+          </Modal>
+        )}
+        <Button
+          name="open modal"
+          size="large"
+          width={ButtonSize.large.width}
+          height={ButtonSize.large.height}
+          border={ButtonSize.large.border}
+          color={colors.darkPink}
+          borderColor={colors.lightPink}
+          onClick={smallModalToggle}
+        ></Button>
+        {smallModal && (
+          <Modal
+            type="small"
+            width="300px"
+            height="200px"
+            onClick={smallModalToggle}
+          >
+            닫기 버튼 1개가 있고, 외부 영역을 누르면 모달이 닫혀요.
+          </Modal>
+        )}
+      </StFlexCon>
     </StSection>
   );
 }
