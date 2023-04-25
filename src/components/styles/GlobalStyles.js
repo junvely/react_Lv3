@@ -3,13 +3,14 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
     :root{
         /* Color */
-        --color-blue: #0d6efd;
         --color-green: #198754;
         --color-red: #dc3545;
         --color-black: #191919;
         --color-white: #ffffff;
         --color-gray: #666666;
         --color-light-gray: #808080;
+        --color-light-green: #74b721;
+        --color-light-red: #ff8a8a;
 
         /* Font size */
         --font-large: 60px;
@@ -24,7 +25,10 @@ const GlobalStyle = createGlobalStyle`
         --weight-light: 300;
 
         /* Size */
-        --size-border-radius: 4px;
+        --size-large: 200px;
+        --size-medium: 150px;
+        --size-small: 100px;
+        --size-border-radius: 10px;
     }
 
     *{

@@ -1,12 +1,12 @@
 import "./App.css";
-import Button from "./components/Buttons/Button";
+import Buttons from "./components/Buttons/Buttons";
 import GlobalStyle from "./components/styles/GlobalStyles";
 
 function App() {
   return (
     <div>
       <GlobalStyle/>
-      <Button/>
+      <Buttons/>
     </div>
   );
 }
