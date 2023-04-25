@@ -23,6 +23,7 @@ function Button() {
       <ButtonsTitle>Buttons</ButtonsTitle>
 
       <ButtonsDiv>
+        {/* Large Primary Button */}
         <StButton
           width="var(--size-large)"
           borderWidth="2px"
@@ -39,6 +40,7 @@ function Button() {
           </ButtonInfoDiv>
         </StButton>
 
+        {/* Medium Primary Button */}
         <StButton
           width="var(--size-medium)"
           backgroundColor="var(--color-light-green)"
@@ -50,6 +52,7 @@ function Button() {
           Medium
         </StButton>
 
+        {/* Small Primary Button */}
         <StButton
           width="var(--size-small)"
           backgroundColor="var(--color-light-green)"
@@ -63,6 +66,7 @@ function Button() {
       </ButtonsDiv>
 
       <ButtonsDiv>
+        {/* Large Dangerous Button */}
         <StButton
           width="var(--size-large)"
           borderWidth="2px"
@@ -79,6 +83,7 @@ function Button() {
           </ButtonInfoDiv>
         </StButton>
 
+        {/* Medium Dangerous Button */}
         <StButton
           width="var(--size-medium)"
           backgroundColor="var(--color-light-red)"
@@ -90,6 +95,7 @@ function Button() {
           Medium
         </StButton>
 
+        {/* Small Dangerous Button */}
         <StButton
           width="var(--size-small)"
           backgroundColor="var(--color-light-red)"
