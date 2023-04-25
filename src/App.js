@@ -1,6 +1,6 @@
 import "./App.css";
 import Button from "./components/Buttons/Button";
-import GlobalStyle from '../src/components/styles/GlobalStyle';
+import GlobalStyle from "./components/styles/GlobalStyles";
 
 function App() {
   return (
