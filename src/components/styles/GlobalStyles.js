@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
         --color-white: #ffffff;
         --color-gray: #666666;
         --color-light-gray: #808080;
-        --color-light-green: #74b721;
+        --color-light-green: #acdf87;
         --color-light-red: #ff8a8a;
 
         /* Font size */
