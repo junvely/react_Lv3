@@ -1,7 +1,7 @@
 import React from "react";
 import { StButton } from "../../../styles/Buttons.styles";
 
-function DangerSmallButton({buttonName}) {
+function DangerSmallButton({onClick, buttonName}) {
   return (
     <>
       <StButton
@@ -11,6 +11,7 @@ function DangerSmallButton({buttonName}) {
         color="var(--color-red)"
         backgroundColorActive="var(--color-red)"
         colorActive="var(--color-white)"
+        onClick={onClick}
       >
         {buttonName}
       </StButton>

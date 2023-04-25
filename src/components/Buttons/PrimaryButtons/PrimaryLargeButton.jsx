@@ -4,7 +4,7 @@ import {
   StButton,
 } from "../../../../src/styles/Buttons.styles";
 
-function PrimaryLargeButton({ largePrimaryButton, buttonName, children }) {
+function PrimaryLargeButton({ onClick, buttonName, children }) {
   return (
     <>
       <StButton
@@ -13,7 +13,7 @@ function PrimaryLargeButton({ largePrimaryButton, buttonName, children }) {
         borderColor="var(--color-light-green)"
         color="var(--color-green)"
         fontWeight="var(--weight-bold)"
-        onClick={largePrimaryButton}
+        onClick={onClick}
       >
         {buttonName}
         <ButtonIconSpan>{children}</ButtonIconSpan>

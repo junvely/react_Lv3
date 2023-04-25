@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const InputsContainer = styled.div`
-  border: 1px solid blue;
   padding: 10px;
   margin-bottom: 20px;
 `;

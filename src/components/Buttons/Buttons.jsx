@@ -25,7 +25,7 @@ function Button() {
       <ButtonsTitle>Buttons</ButtonsTitle>
 
       <ButtonsDiv>
-        <PrimaryLargeButton buttonName={"Large Primary Button"} PrimaryLargeButton={largePrimaryButton}>
+        <PrimaryLargeButton buttonName={"Large Primary Button"} onClick={largePrimaryButton}>
           <FaAngleRight />
         </PrimaryLargeButton>
         <PrimaryMediumButton buttonName={"Medium"}></PrimaryMediumButton>
@@ -35,7 +35,7 @@ function Button() {
       <ButtonsDiv>
         <DangerLargeButton
           buttonName={"Large Danger Button"}
-          largeDangerButton={largeDangerButton}
+          onClick={largeDangerButton}
         >
           <FaInfo />
         </DangerLargeButton>

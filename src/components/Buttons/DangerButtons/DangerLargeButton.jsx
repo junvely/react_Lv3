@@ -4,7 +4,7 @@ import {
   StButton,
 } from "../../../styles/Buttons.styles";
 
-function DangerLargeButton({ largeDangerButton, buttonName, children }) {
+function DangerLargeButton({ onClick, buttonName, children }) {
   
   return (
     <>
@@ -14,7 +14,7 @@ function DangerLargeButton({ largeDangerButton, buttonName, children }) {
         borderColor="var(--color-light-red)"
         color="var(--color-red)"
         fontWeight="var(--weight-bold)"
-        onClick={largeDangerButton}
+        onClick={onClick}
       >
         {buttonName}
         <ButtonIconSpan>{children}</ButtonIconSpan>
