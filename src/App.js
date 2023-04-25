@@ -1,32 +1,18 @@
-import styled from "styled-components";
 import "./App.css";
+import ButtonSec from "./components/ButtonSec";
+import InputSec from "./components/InputSec";
+import ModalSec from "./components/ModalSec";
+import SelectSec from "./components/SelectSec";
 
 function App() {
   return (
     <>
-      <StSection>
-        <StTitle>Button</StTitle>
-        {/* buttons */}
-      </StSection>
-      <StSection>
-        <StTitle>Input</StTitle>
-        {/* inputs */}
-      </StSection>
-      <StSection>
-        <StTitle>Modal</StTitle>
-        {/* modals */}
-      </StSection>
-      <StSection>
-        <StTitle>Select</StTitle>
-        {/* selects */}
-      </StSection>
+      <ButtonSec>Button</ButtonSec>
+      <InputSec>Input</InputSec>
+      <ModalSec>Modal</ModalSec>
+      <SelectSec>Select</SelectSec>
     </>
   );
 }
-
-const StSection = styled.section``;
-const StTitle = styled.h1`
-  font-size: 30px;
-`;
 
 export default App;
