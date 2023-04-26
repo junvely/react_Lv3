@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { colors } from "../styles/them";
 import { StFlexCon, StSection, StTitle } from "../styles/Global.styles";
-import Button from "./Button";
 import { ButtonSize } from "../styles/Button.styles";
+import Button from "./Button";
 import Modal from "./Modal";
 
 function ModalSec({ children }) {

@@ -33,6 +33,14 @@ export const StButtonCon = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  &:active {
+    background-color: ${(props) =>
+      props.bgColor === colors.lightPink
+        ? colors.pink
+        : props.bgColor === colors.lightGreen
+        ? colors.green
+        : colors.white};
+  }
 `;
 
 export const StButton = styled.button`

@@ -10,6 +10,7 @@ function Button({
   bgColor,
   border,
   borderColor,
+  active,
   onClick,
 }) {
   return (
