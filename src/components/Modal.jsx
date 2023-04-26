@@ -15,7 +15,11 @@ function Modal({ children, type, width, height, onClick }) {
         type === "small" && onClick();
       }}
     >
-      <StModalCon width={width} height={height}>
+      <StModalCon
+        width={width}
+        height={height}
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* small 모달창의 TopCloseButton display */}
         {type === "small" && (
           <StTopCloseButton>
