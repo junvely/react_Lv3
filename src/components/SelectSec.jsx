@@ -1,12 +1,18 @@
 import React from "react";
-import { StFlexCon, StSection, StTitle } from "../styles/them";
+import { StFlexCon, StTitle } from "../styles/them";
+import Select from "./Select";
+import { StSecCon } from "../styles/Select.styles";
 
 function SelectSec({ children }) {
   return (
-    <StSection>
+    <StSecCon>
       <StTitle>{children}</StTitle>
+      <StFlexCon>
+        <Select position="absolute"></Select>
+        <Select></Select>
+      </StFlexCon>
       <StFlexCon></StFlexCon>
-    </StSection>
+    </StSecCon>
   );
 }
 
