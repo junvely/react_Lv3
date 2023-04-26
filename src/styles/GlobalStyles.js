@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
         --color-black: #191919;
         --color-white: #ffffff;
         --color-gray: #666666;
-        --color-light-gray: #808080;
+        --color-light-gray: #dddddd;
         --color-light-green: #acdf87;
         --color-light-red: #ff8a8a;
 
@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
         --weight-light: 300;
 
         /* Size */
+        --size-extra-large: 300px;
         --size-large: 200px;
         --size-medium: 150px;
         --size-small: 100px;

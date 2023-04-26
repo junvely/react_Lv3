@@ -17,24 +17,12 @@ function Modals() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpenOut, setIsModalOpenOut] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
-    console.log("열기!");
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-    console.log("닫기!");
-  };
-
-  const openModalOut = () => {
-    setIsModalOpenOut(true);
-    console.log("열기!");
-  };
-
-  const closeModalOut = () => {
-    setIsModalOpenOut(false);
-    console.log("외부영역닫기!");
+  const toggleModalOut = () => {
+    setIsModalOpenOut(!isModalOpenOut);
   };
 
   return (
@@ -44,7 +32,7 @@ function Modals() {
         {/* Open and Close Modal by clicking on buttons */}
         <PrimarySmallButton
           buttonName={"open modal"}
-          onClick={openModal}
+          onClick={toggleModal}
         ></PrimarySmallButton>
         <ModalOpen style={{ display: isModalOpen ? "block" : "none" }}>
           <ModalContent>
@@ -55,7 +43,7 @@ function Modals() {
             <ModalContentButtonDiv>
               <DangerSmallButton
                 buttonName={"닫기"}
-                onClick={closeModal}
+                onClick={toggleModal}
               ></DangerSmallButton>
               <PrimarySmallButton buttonName={"확인"}></PrimarySmallButton>
             </ModalContentButtonDiv>
@@ -65,12 +53,14 @@ function Modals() {
         {/* Open and Close Modal by clicking outside content */}
         <DangerLargeButton
           buttonName={"open modal"}
-          onClick={openModalOut}
+          onClick={toggleModalOut}
         ></DangerLargeButton>
+
         <ModalOpen
           style={{ display: isModalOpenOut ? "block" : "none" }}
-          onClick={closeModalOut}
+          onClick={toggleModalOut}
         ></ModalOpen>
+
         <ModalContent style={{ display: isModalOpenOut ? "block" : "none" }}>
           <ModalContentDiv>
             <ModalContentP>
@@ -79,11 +69,12 @@ function Modals() {
             <ModalContentButtonDiv>
               <DangerSmallButton
                 buttonName={"닫기"}
-                onClick={closeModalOut}
+                onClick={toggleModalOut}
               ></DangerSmallButton>
             </ModalContentButtonDiv>
           </ModalContentDiv>
         </ModalContent>
+        
       </ModalsDiv>
     </ModalsContainer>
   );

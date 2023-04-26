@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ModalsContainer = styled.div`
-  border: 1px solid green;
   padding: 10px;
   margin-bottom: 20px;
 `;
@@ -13,8 +12,6 @@ export const ModalsDiv = styled.div`
 `;
 
 export const ModalOpen = styled.div`
-  width: 500px;
-  height: 300px;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -22,7 +19,6 @@ export const ModalOpen = styled.div`
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: #ffffff;
   background-color: rgba(221, 221, 221, 0.8);
 `;
 
