@@ -1,5 +1,7 @@
 ### Commit Convention
 
+배포 : react-lv3-xi.vercel.app
+
 - Feat : 새로운 기능을 추가할 경우
 - Fix : 버그를 고친 경우
 - Design : CSS 등 사용자 UI 디자인 변경
