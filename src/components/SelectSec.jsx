@@ -1,5 +1,5 @@
 import React from "react";
-import { StFlexCon, StTitle } from "../styles/them";
+import { StFlexCon, StTitle } from "../styles/Global.styles";
 import Select from "./Select";
 import { StSecCon } from "../styles/Select.styles";
 

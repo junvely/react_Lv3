@@ -4,6 +4,7 @@ import {
   StDropDown,
   StSelectButton,
   StSelectCon,
+  StToggleButton,
 } from "../styles/Select.styles";
 
 function Select({ position }) {
@@ -17,15 +18,19 @@ function Select({ position }) {
 
   return (
     <StSelectCon>
-      <StSelectButton onClick={toggleChange}>
+      <StToggleButton onClick={toggleChange}>
         <p>{selected}</p>
         <IoIosArrowDown></IoIosArrowDown>
-      </StSelectButton>
+      </StToggleButton>
       <StDropDown position={position}>
         {selectToggle && (
           <ul>
-            {subjects.map((data) => {
-              return <li onClick={() => setSelected(data)}>{data}</li>;
+            {subjects.map((data, idx) => {
+              return (
+                <li key={idx} onClick={() => setSelected(data)}>
+                  {data}
+                </li>
+              );
             })}
           </ul>
         )}

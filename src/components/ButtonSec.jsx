@@ -1,7 +1,7 @@
 import React from "react";
-import { StFlexCon, StSection, StTitle } from "../styles/them";
-import Button from "./Button";
 import { colors } from "../styles/them";
+import { StFlexCon, StSection, StTitle } from "../styles/Global.styles";
+import Button from "./Button";
 import { IoIosArrowForward } from "react-icons/io";
 import { VscBellDot } from "react-icons/vsc";
 import { ButtonSize } from "../styles/Button.styles";

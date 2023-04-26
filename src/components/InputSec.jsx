@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { StFlexCon, StSection, StTitle, colors } from "../styles/them";
+import { colors } from "../styles/them";
+import { StFlexCon, StSection, StTitle } from "../styles/Global.styles";
 import Input from "./Input";
 import Button from "./Button";
 

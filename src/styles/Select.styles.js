@@ -13,7 +13,7 @@ export const StSelectCon = styled.div`
   margin: 10px;
 `;
 
-export const StSelectButton = styled.div`
+export const StToggleButton = styled.div`
   width: 100%;
   font-size: 12px;
   line-height: 40px;
